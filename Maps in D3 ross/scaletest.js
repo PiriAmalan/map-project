@@ -30,10 +30,12 @@ colourScale = d3.scale.linear()
 	.domain ([0,100])
 	.range(['#FFF','#933'])
 
-costScale = function(datum){  
+costScale = function(data){  
   return colourScale(
       colourScale(data ["Retail price"])
   )
 }
 data.map(costScale)  
 console.log(costScale)
+
+rect id="Swaziland" color=#//relevant hex
