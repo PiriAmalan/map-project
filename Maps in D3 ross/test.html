@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+/* CSS goes here. */
+  
+
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+   
+   
+   
+<script>
+    d3.json("cocaineprice.json", function(error, data) {
+     if (error) return console.error(error)
+    
+
+
+      /* JavaScript goes here. */
+      var cokelow = COCAINEPRICES[0].Retail_price,
+          cokehigh = COCAINEPRICES[0].Retail_price;
+
+      for (i = 0; i < COCAINEPRICES.length; i++){
+         console.log(COCAINEPRICES[i].Alpha_2,COCAINEPRICES[i].Retail_price);
+
+        if (COCAINEPRICES[i].Retail_price< cokelow){cokelow=COCAINEPRICES[i].Retail_price;}
+
+        if (COCAINEPRICES[i].Retail_price> cokehigh){cokehigh=COCAINEPRICES[i].Retail_price;}
+      }
+        console.log( cokehigh)
+        console.log( cokelow)
+
+
+
+    var color = d3.scale.linear()
+        .domain([cokelow,251.6])
+        .range([ "red" , "white"]);
+
+    // color(cokelow)   // "#ff0000" red
+    // color(cokehigh)    // "#008000" totally green!
+
+
+        console.log(color(cokehigh))
+        console.log(color(cokelow))
+        console.log(color(COCAINEPRICES[0].Retail_price))
+        console.log(color(COCAINEPRICES[5].Retail_price))
+
+      for (i = 0; i < COCAINEPRICES.length; i++){
+          console.log(COCAINEPRICES[i].Alpha_2 +  color(COCAINEPRICES[i].Retail_price))
+    };
+}); 
+</script>
