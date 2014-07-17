@@ -5,13 +5,13 @@
     .countries.RU { fill: #9dd89d; }
 
     .country:hover {
-    fill:#9dd89d;
+   
     stroke: black;
     stroke-width: .9;
       }
 
     .country {
-    fill: #c7e9c7;
+ 
     stroke: black;
     stroke-width: .2;
     }
@@ -84,24 +84,49 @@
       i = -1,
       n = countries.length;
 
-  /*svg.selectAll(".countries")
-    .data(topojson.feature(world, world.objects.countries).features)
-    .enter().append("path")
-    .attr("class", function(d) { return "countries " + d.id; })
-    .attr("d", path);*/
+     //TEST.HTML START
+d3.json("cocainedata.json", function(error, data) {
+      if (error) console.log(error);
+      var COCAINEPRICES = data;
+      //console.log(COCAINEPRICES)
 
+       //define the high and low of the prices
+var cokelow = COCAINEPRICES[0].Retail_price
+var cokehigh = COCAINEPRICES[0].Retail_price
+for (i = 0; i < COCAINEPRICES.length; i++){
+   //console.log(COCAINEPRICES[i]['Alpha-2'],COCAINEPRICES[i].Retail_price);
+if (COCAINEPRICES[i].Retail_price< cokelow){cokelow=COCAINEPRICES[i].Retail_price;}
+if (COCAINEPRICES[i].Retail_price> cokehigh){cokehigh=COCAINEPRICES[i].Retail_price;}
+}
+   
+console.log( cokehigh)
+console.log( cokelow)
+//sets the color scale
+var color = d3.scale.linear()
+    .domain([cokelow,cokehigh])
+    .range([ "white" , "red"]);
+ 
+for (i = 0; i < COCAINEPRICES.length; i++){
+  console.log(COCAINEPRICES[i]['Alpha-2'] + color(COCAINEPRICES[i].Retail_price))
+};
+  //makes an object of {aloha-2 : colorcode (setbyprice)}
+  var cc ={}
+  
+    for (i = 0; i < COCAINEPRICES.length; i++){
+      cc[COCAINEPRICES[i]['Alpha-2']]= color(COCAINEPRICES[i].Retail_price)
+          }; 
+      
+console.log(cc);
+
+   });
+     
+     //TEST.HTML END
+     
+     
   svg.append("path")
     .datum(graticule)
     .attr("class", "graticule")
     .attr("d", path);
-
-  // svg.selectAll(".subunit-label")
-  //   .data(topojson.feature(world, world.objects.countries).features)
-  //   .enter().append("text")
-  //   .attr("class", function(d) { return "subunit-label " + d.id; })
-  //   .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
-  //   .attr("dy", ".35em")
-  //   .text(function(d) { return d.id; }); //properties.name
 
   var country = svg.selectAll(".country").data(countries);
   country
@@ -109,6 +134,7 @@
       .attr("class", "country")
       .attr("title", function(d,i) { return d.name; })
       .attr("d", path)
+      .style("fill", "#FF69B4")
 
   var tooltip = d3.select("body").append("div")
     .attr("class", "tooltip");
