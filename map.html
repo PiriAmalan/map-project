@@ -5,13 +5,13 @@
     .countries.RU { fill: #9dd89d; }
 
     .country:hover {
-    fill:#9dd89d;
+   
     stroke: black;
     stroke-width: .9;
       }
 
     .country {
-    fill: #c7e9c7;
+ 
     stroke: black;
     stroke-width: .2;
     }
@@ -90,6 +90,12 @@
     .attr("class", function(d) { return "countries " + d.id; })
     .attr("d", path);*/
 
+     //TEST.HTML START
+     
+     
+     //TEST.HTML END
+     
+     
   svg.append("path")
     .datum(graticule)
     .attr("class", "graticule")
