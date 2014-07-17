@@ -14,6 +14,7 @@
  
     stroke: black;
     stroke-width: .2;
+    color: #939F49;  
     }
 
     /*.subunit-label {
@@ -103,14 +104,15 @@ console.log( cokehigh)
 console.log( cokelow)
 //sets the color scale
 var color = d3.scale.linear()
-    .domain([cokelow,cokehigh])
-    .range([ "white" , "red"]);
+    .domain([cokelow,250,cokehigh])
+.range([ "#C3BBBB" , "#FF0101" , "red"]); //workaround: Had the same issue with outliers so just added another midpoint 
  
 for (i = 0; i < COCAINEPRICES.length; i++){
   console.log(COCAINEPRICES[i]['Alpha-2'] + color(COCAINEPRICES[i].Retail_price))
 };
   //makes an object of {aloha-2 : colorcode (setbyprice)}
-  var cc ={}
+ 
+    var cc ={}
   
     for (i = 0; i < COCAINEPRICES.length; i++){
       cc[COCAINEPRICES[i]['Alpha-2']]= color(COCAINEPRICES[i].Retail_price)
@@ -118,7 +120,7 @@ for (i = 0; i < COCAINEPRICES.length; i++){
       
 console.log(cc);
 
-   });
+  
      
      //TEST.HTML END
      
@@ -134,7 +136,9 @@ console.log(cc);
       .attr("class", "country")
       .attr("title", function(d,i) { return d.name; })
       .attr("d", path)
-      .style("fill", "#FF69B4")
+      .style("fill", function(d) 
+                   {return (cc[d.id]); 
+                   })
 
   var tooltip = d3.select("body").append("div")
     .attr("class", "tooltip");
@@ -146,12 +150,13 @@ console.log(cc);
           .classed("hidden", false)
           .attr("style", "left:"+(mouse[0]+10)+"px;top:"+(mouse[1]+40)+"px")
          //.html(d.properties.name
-          .html(d.properties.name + " " + "(" + d.properties.continent + ")")
+          .html(d.properties.name + " " + "(" + d.properties.continent + ")" )
       })
       .on("mouseout",  function(d,i) {
         tooltip.classed("hidden", true)
       });
 
 
+  });
   });
 </script>﻿
