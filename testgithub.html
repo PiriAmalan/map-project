@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+/* CSS goes here. */
+
+</style>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/topojson.v1.min.js"></script>
+   
+   
+   
+<script>
+d3.json("cocainedata.json", function(error, uk) {
+  if (error) console.log(error);
+var COCAINEPRICES = uk;
+//console.log(COCAINEPRICES)
+
+  /* JavaScript goes here. */
+var cokelow = COCAINEPRICES[0].Retail_price
+var cokehigh = COCAINEPRICES[0].Retail_price
+for (i = 0; i < COCAINEPRICES.length; i++){
+   //console.log(COCAINEPRICES[i]['Alpha-2'],COCAINEPRICES[i].Retail_price);
+if (COCAINEPRICES[i].Retail_price< cokelow){cokelow=COCAINEPRICES[i].Retail_price;}
+if (COCAINEPRICES[i].Retail_price> cokehigh){cokehigh=COCAINEPRICES[i].Retail_price;}
+}
+   
+console.log( cokehigh)
+console.log( cokelow)
+
+
+
+var color = d3.scale.linear()
+    .domain([cokelow,cokehigh])
+    .range([ "white" , "red"]);
+ 
+
+// color(cokelow)   // "#ff0000" red
+// color(cokehigh)    // "#008000" totally green!
+
+
+//console.log(color(cokehigh))
+//console.log(color(cokelow))
+//console.log(color(COCAINEPRICES[0].Retail_price))
+//console.log(color(COCAINEPRICES[5].Retail_price))
+
+
+
+for (i = 0; i < COCAINEPRICES.length; i++){
+console.log(COCAINEPRICES[i]['Alpha-2'] +  color(COCAINEPRICES[i].Retail_price))
+};
+//var countrycolor = for (i = 0; i < COCAINEPRICES.length; i++){
+  // return color(COCAINEPRICES[i].Retail_price) + ":" COCAINEPRICES[i]['Alpha-2']
+
+   
+   
+var cc = new Object();
+for (i = 0; i < COCAINEPRICES.length; i++){
+   
+ return  cc.COCAINEPRICES[i]['Alpha-2'] = color(COCAINEPRICES[i].Retail_price)
+} 
+
+   console.log(cc)
+      
+
+
+   });
+</script>

@@ -84,6 +84,7 @@
       i = -1,
       n = countries.length;
 
+<<<<<<< HEAD
      //TEST.HTML START
 d3.json("cocainedata.json", function(error, data) {
       if (error) console.log(error);
@@ -119,6 +120,16 @@ for (i = 0; i < COCAINEPRICES.length; i++){
 console.log(cc);
 
    });
+=======
+  /*svg.selectAll(".countries")
+    .data(topojson.feature(world, world.objects.countries).features)
+    .enter().append("path")
+    .attr("class", function(d) { return "countries " + d.id; })
+    .attr("d", path);*/
+
+     //TEST.HTML START
+     
+>>>>>>> a370ff42dc7bc631d585df7177bd09bd72ede048
      
      //TEST.HTML END
      

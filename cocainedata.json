@@ -1,0 +1,542 @@
+[
+  {
+    "Country name":"Canada",
+    "Alpha-2":"CA",
+    "Retail_price":81.2, 
+    "Wholesale price":35507.8
+  },
+  {
+    "Country name":"Lithuania",
+    "Alpha-2":"LT",
+    "Retail_price":84.5,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Swaziland",
+    "Alpha-2":"SZ",
+    "Retail_price":35.4,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Argentina",
+    "Alpha-2":"AR",
+    "Retail_price":5.9,
+    "Wholesale price":4800.0
+  },
+  {
+    "Country name":"Cameroon",
+    "Alpha-2":"CM",
+    "Retail_price":31.3,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Bahrain",
+    "Alpha-2":"BH",
+    "Retail_price":159.1,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Saudi Arabia",
+    "Alpha-2":"SA",
+    "Retail_price":213.7,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Japan",
+    "Alpha-2":"JP",
+    "Retail_price":251.6,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Slovenia",
+    "Alpha-2":"SI",
+    "Retail_price":97.7,
+    "Wholesale price":55842.5
+  },
+  {
+    "Country name":"Guatemala",
+    "Alpha-2":"GT",
+    "Retail_price":13.3,
+    "Wholesale price":12262.4
+  },
+  {
+    "Country name":"Bosnia and Herzegovina",
+    "Alpha-2":"BA",
+    "Retail_price":67.8,
+    "Wholesale price":44118.0
+  },
+  {
+    "Country name":"Russian Federation",
+    "Alpha-2":"RU",
+    "Retail_price":169.9,
+    "Wholesale price":12579.6
+  },
+  {
+    "Country name":"Germany",
+    "Alpha-2":"DE",
+    "Retail_price":91.7,
+    "Wholesale price":64044.4
+  },
+  {
+    "Country name":"Dominica",
+    "Alpha-2":"DM",
+    "Retail_price":57.5,
+    "Wholesale price":38000.0
+  },
+  {
+    "Country name":"Netherlands",
+    "Alpha-2":"NL",
+    "Retail_price":58.7,
+    "Wholesale price":41596.0
+  },
+  {
+    "Country name":"Paraguay",
+    "Alpha-2":"PY",
+    "Retail_price":20.0,
+    "Wholesale price":6000.0
+  },
+  {
+    "Country name":"Gabon",
+    "Alpha-2":"GA",
+    "Retail_price":92.2,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Pakistan",
+    "Alpha-2":"PK",
+    "Retail_price":140.5,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Albania",
+    "Alpha-2":"AL",
+    "Retail_price":83.8,
+    "Wholesale price":51654.3
+  },
+  {
+    "Country name":"Saint Vincent and the Grenadines",
+    "Alpha-2":"VC",
+    "Retail_price":1.8,
+    "Wholesale price":7000.0
+  },
+  {
+    "Country name":"Kenya",
+    "Alpha-2":"KE",
+    "Retail_price":31.3,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Czech Republic",
+    "Alpha-2":"CZ",
+    "Retail_price":113.6,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Iran (Islamic Republic of)",
+    "Alpha-2":"IR",
+    "Retail_price":126.3,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Turks and Caicos Islands",
+    "Alpha-2":"TC",
+    "Retail_price":20.0,
+    "Wholesale price":9000.0
+  },
+  {
+    "Country name":"Saint Lucia",
+    "Alpha-2":"LC",
+    "Retail_price":9.3,
+    "Wholesale price":21115.4
+  },
+  {
+    "Country name":"France",
+    "Alpha-2":"FR",
+    "Retail_price":87.3,
+    "Wholesale price":38391.7
+  },
+  {
+    "Country name":"Peru",
+    "Alpha-2":"PE",
+    "Retail_price":4.5,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Benin",
+    "Alpha-2":"BJ",
+    "Retail_price":30.3,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Montenegro",
+    "Alpha-2":"ME",
+    "Retail_price":111.7,
+    "Wholesale price":55842.5
+  },
+  {
+    "Country name":"Togo",
+    "Alpha-2":"TG",
+    "Retail_price":2.5,
+    "Wholesale price":28000.0
+  },
+  {
+    "Country name":"Armenia",
+    "Alpha-2":"AM",
+    "Retail_price":275.0,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Dominican Republic",
+    "Alpha-2":"DO",
+    "Retail_price":8.2,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Bolivia (Plurinational State of)",
+    "Alpha-2":"BO",
+    "Retail_price":5.8,
+    "Wholesale price":2500.0
+  },
+  {
+    "Country name":"Ukraine",
+    "Alpha-2":"UA",
+    "Retail_price":189.6,
+    "Wholesale price":160000.0
+  },
+  {
+    "Country name":"Macao, China",
+    "Alpha-2":"MO",
+    "Retail_price":310.0,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Liechtenstein",
+    "Alpha-2":"LI",
+    "Retail_price":1133.7,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Mali",
+    "Alpha-2":"ML",
+    "Retail_price":62.7,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Bulgaria",
+    "Alpha-2":"BG",
+    "Retail_price":86.1,
+    "Wholesale price":57384.7
+  },
+  {
+    "Country name":"Portugal",
+    "Alpha-2":"PT",
+    "Retail_price":61.0,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"South Africa",
+    "Alpha-2":"ZA",
+    "Retail_price":32.7,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Nicaragua",
+    "Alpha-2":"NI",
+    "Retail_price":13.5,
+    "Wholesale price":6500.0
+  },
+  {
+    "Country name":"Sweden",
+    "Alpha-2":"SE",
+    "Retail_price":124.6,
+    "Wholesale price":54494.2
+  },
+  {
+    "Country name":"Austria",
+    "Alpha-2":"AT",
+    "Retail_price":97.3,
+    "Wholesale price":48667.9
+  },
+  {
+    "Country name":"Hungary",
+    "Alpha-2":"HU",
+    "Retail_price":75.0,
+    "Wholesale price":39089.8
+  },
+  {
+    "Country name":"Brazil",
+    "Alpha-2":"BR",
+    "Retail_price":12.0,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Guinea",
+    "Alpha-2":"GN",
+    "Retail_price":20.0,
+    "Wholesale price":20000.0
+  },
+  {
+    "Country name":"Panama",
+    "Alpha-2":"PA",
+    "Retail_price":2.0,
+    "Wholesale price":2500.0
+  },
+  {
+    "Country name":"Luxembourg",
+    "Alpha-2":"LU",
+    "Retail_price":119.2,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Bahamas",
+    "Alpha-2":"BS",
+    "Retail_price":20.0,
+    "Wholesale price":7000.0
+  },
+  {
+    "Country name":"Gibraltar",
+    "Alpha-2":"GI",
+    "Retail_price":92.4,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Ireland",
+    "Alpha-2":"IE",
+    "Retail_price":97.7,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Nigeria",
+    "Alpha-2":"NG",
+    "Retail_price":32.5,
+    "Wholesale price":19610.0
+  },
+  {
+    "Country name":"Ecuador",
+    "Alpha-2":"EC",
+    "Retail_price":7.0,
+    "Wholesale price":4000.0
+  },
+  {
+    "Country name":"Belarus",
+    "Alpha-2":"BY",
+    "Retail_price":110.0,
+    "Wholesale price":75.0
+  },
+  {
+    "Country name":"El Salvador",
+    "Alpha-2":"SV",
+    "Retail_price":24.0,
+    "Wholesale price":25000.0
+  },
+  {
+    "Country name":"Chile",
+    "Alpha-2":"CL",
+    "Retail_price":20.8,
+    "Wholesale price":9373.0
+  },
+  {
+    "Country name":"Belgium",
+    "Alpha-2":"BE",
+    "Retail_price":75.3,
+    "Wholesale price":46593.6
+  },
+  {
+    "Country name":"Haiti",
+    "Alpha-2":"HT",
+    "Retail_price":10.0,
+    "Wholesale price":6500.0
+  },
+  {
+    "Country name":"Belize",
+    "Alpha-2":"BZ",
+    "Retail_price":7.5,
+    "Wholesale price":7447.2
+  },
+  {
+    "Country name":"Denmark",
+    "Alpha-2":"DK",
+    "Retail_price":89.0,
+    "Wholesale price":44501.4
+  },
+  {
+    "Country name":"Philippines",
+    "Alpha-2":"PH",
+    "Retail_price":138.4,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Croatia",
+    "Alpha-2":"HR",
+    "Retail_price":99.4,
+    "Wholesale price":46365.0
+  },
+  {
+    "Country name":"Switzerland",
+    "Alpha-2":"CH",
+    "Retail_price":102.0,
+    "Wholesale price":58950.2
+  },
+  {
+    "Country name":"Grenada",
+    "Alpha-2":"GD",
+    "Retail_price":36.9,
+    "Wholesale price":9223.4
+  },
+  {
+    "Country name":"Venezuela (Bolivarian Republic of)",
+    "Alpha-2":"VE",
+    "Retail_price":9.3,
+    "Wholesale price":4190.0
+  },
+  {
+    "Country name":"Uruguay",
+    "Alpha-2":"UY",
+    "Retail_price":12.9,
+    "Wholesale price":5500.0
+  },
+  {
+    "Country name":"Lebanon",
+    "Alpha-2":"LB",
+    "Retail_price":80.0,
+    "Wholesale price":45000.0
+  },
+  {
+    "Country name":"Spain",
+    "Alpha-2":"ES",
+    "Retail_price":82.3,
+    "Wholesale price":47876.6
+  },
+  {
+    "Country name":"Colombia",
+    "Alpha-2":"CO",
+    "Retail_price":3.5,
+    "Wholesale price":2438.8
+  },
+  {
+    "Country name":"Cyprus",
+    "Alpha-2":"CY",
+    "Retail_price":111.7,
+    "Wholesale price":55842.5
+  },
+  {
+    "Country name":"Barbados",
+    "Alpha-2":"BB",
+    "Retail_price":20.8,
+    "Wholesale price":17326.7
+  },
+  {
+    "Country name":"Italy",
+    "Alpha-2":"IT",
+    "Retail_price":94.7,
+    "Wholesale price":54694.3
+  },
+  {
+    "Country name":"Malta",
+    "Alpha-2":"MT",
+    "Retail_price":89.3,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Anguilla",
+    "Alpha-2":"AI",
+    "Retail_price":17.5,
+    "Wholesale price":17500.0
+  },
+  {
+    "Country name":"The former Yugoslav Republic of Macedonia",
+    "Alpha-2":"MK",
+    "Retail_price":72.9,
+    "Wholesale price":49014.4
+  },
+  {
+    "Country name":"Israel",
+    "Alpha-2":"IL",
+    "Retail_price":113.0,
+    "Wholesale price":100000.0
+  },
+  {
+    "Country name":"Iceland",
+    "Alpha-2":"IS",
+    "Retail_price":131.0,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Zambia",
+    "Alpha-2":"ZM",
+    "Retail_price":37.8,
+    "Wholesale price":36532.2
+  },
+  {
+    "Country name":"Jordan",
+    "Alpha-2":"JO",
+    "Retail_price":126.3,
+    "Wholesale price":84166.8
+  },
+  {
+    "Country name":"Gambia",
+    "Alpha-2":"GM",
+    "Retail_price":23.0,
+    "Wholesale price":21920.7
+  },
+  {
+    "Country name":"Poland",
+    "Alpha-2":"PL",
+    "Retail_price":66.9,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Trinidad and Tobago",
+    "Alpha-2":"TT",
+    "Retail_price":63.9,
+    "Wholesale price":6390.0
+  },
+  {
+    "Country name":"Latvia",
+    "Alpha-2":"LV",
+    "Retail_price":125.6,
+    "Wholesale price":55842.5
+  },
+  {
+    "Country name":"Guyana",
+    "Alpha-2":"GY",
+    "Retail_price":5.0,
+    "Wholesale price":5000.0
+  },
+  {
+    "Country name":"Côte d'Ivoire",
+    "Alpha-2":"CI",
+    "Retail_price":40.4,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Hong Kong, China",
+    "Alpha-2":"HK",
+    "Retail_price":138.3,
+    "Wholesale price":50975.0
+  },
+  {
+    "Country name":"United Kingdom",
+    "Alpha-2":"GB",
+    "Retail_price":64.3,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Greece",
+    "Alpha-2":"GR",
+    "Retail_price":97.7,
+    "Wholesale price":56540.6
+  },
+  {
+    "Country name":"Sri Lanka",
+    "Alpha-2":"LK",
+    "Retail_price":145.5,
+    "Wholesale price":null
+  },
+  {
+    "Country name":"Namibia",
+    "Alpha-2":"NA",
+    "Retail_price":70.8,
+    "Wholesale price":68119.9
+  }
+]
