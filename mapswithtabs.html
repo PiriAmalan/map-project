@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
 <meta charset="utf-8">
 <style>
+
+    .countries.RU { fill: #9dd89d; }
 
     .country:hover {
    
@@ -13,18 +14,27 @@
  
     stroke: black;
     stroke-width: .2;
-      
+    color: #939F49;  
     }
 
-  
+    /*.subunit-label {
+      fill: #999;
+      fill-opacity: .5;
+      font-size: 8px;
+      font-weight: 100;
+      text-anchor: middle;
+    }*/
+/* .subunit-label is not being used..
+*/    
 
     .graticule { 
       fill: none;
       stroke: #777;
       stroke-width: .0px;
       stroke-opacity: .0;
-    };
-/    
+    }
+/* .graticule (i.e. the longitude and latitude lines) is not being used. the width and opacity have been reduced to 0.
+*/    
 
 .hidden {
       display: none;
@@ -40,32 +50,30 @@
       position: absolute;
       font-family: arial;
       font-size: 13px;
-    };
-
-  #map {
-    background-color:#80BFFF
-  };
+    }
 </style>
 <body>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://d3js.org/d3.geo.projection.v0.min.js"></script>
 <script src="http://d3js.org/topojson.v1.min.js"></script>
-<div id="map">
-  <script>
+<script>
   var width = 800,
     height = 660;
 
-  var svg = d3.select("#map").append("svg")
+  var svg = d3.select("body").append("svg")
     .attr("width", width)
-    .attr("height", height)
-    .style("fill", '#80BFFF');
+    .attr("height", height);
 
   d3.json("world_edited.json", function(error, world) {
   if (error) return console.error(error);
 
   var datum = topojson.feature(world, world.objects.countries);
- 
-  var proj = d3.geo.mercator()    
+  // var proj = d3.geo.mercator().scale(500)
+  //     .translate([width / 2, height / 2])
+  var proj = d3.geo.mercator()    //kavrayskiy7  //eckert3()
+    // .center([0, 54.4])
+    // .rotate([4.4, 0])
+    // .parallels([50, 60])
     .scale(100)
     .translate([width / 2, height / 2]);
 
@@ -84,49 +92,38 @@ d3.json("cocainedata.json", function(error, data) {
       //console.log(COCAINEPRICES)
 
        //define the high and low of the prices
-var cokelow = COCAINEPRICES[0].Retail_price,
-    cokehigh = COCAINEPRICES[0].Retail_price;
-  
+var cokelow = COCAINEPRICES[0].Retail_price
+var cokehigh = COCAINEPRICES[0].Retail_price
 for (i = 0; i < COCAINEPRICES.length; i++){
    //console.log(COCAINEPRICES[i]['Alpha-2'],COCAINEPRICES[i].Retail_price);
-    if (COCAINEPRICES[i].Retail_price< cokelow){cokelow=COCAINEPRICES[i].Retail_price;}
-    if (COCAINEPRICES[i].Retail_price> cokehigh){cokehigh=COCAINEPRICES[i].Retail_price;}
-  }
+if (COCAINEPRICES[i].Retail_price< cokelow){cokelow=COCAINEPRICES[i].Retail_price;}
+if (COCAINEPRICES[i].Retail_price> cokehigh){cokehigh=COCAINEPRICES[i].Retail_price;}
+}
    
-    console.log( cokehigh)
-    console.log( cokelow)
+console.log( cokehigh)
+console.log( cokelow)
 //sets the color scale
 var color = d3.scale.linear()
     .domain([cokelow,250,cokehigh])
-    .range([ "#C3BBBB" , "#FF0101" , "red"]); //workaround: Had the same issue with outliers so just added another midpoint 
+.range([ "#C3BBBB" , "#FF0101" , "red"]); //workaround: Had the same issue with outliers so just added another midpoint 
  
-  for (i = 0; i < COCAINEPRICES.length; i++){
-      console.log(COCAINEPRICES[i]['Alpha-2'] + color(COCAINEPRICES[i].Retail_price))
-  };
-  //makes an object of {aloha-2 : colorcode (setbyprice)}
+for (i = 0; i < COCAINEPRICES.length; i++){
+  console.log(COCAINEPRICES[i]['Alpha-2'] + color(COCAINEPRICES[i].Retail_price))
+};
+  //makes an object of {alpha-2 : colorcode (setbyprice)}
  
-var cc ={}
+    var cc ={}
   
     for (i = 0; i < COCAINEPRICES.length; i++){
       cc[COCAINEPRICES[i]['Alpha-2']]= color(COCAINEPRICES[i].Retail_price)
           }; 
       
 console.log(cc);
-   //TEST.HTML END
-  //Wholsale price colour code start
+
   
-  
-  
-  
-  //wholsale price colour code end
-  //matching country with retail price   
-  var priceMatch ={}
-  
-    for (i = 0; i < COCAINEPRICES.length; i++){
-      priceMatch[COCAINEPRICES[i]['Alpha-2']]= '$' + COCAINEPRICES[i].Retail_price
-          }; 
-          console.log(priceMatch)
- 
+     
+     //TEST.HTML END
+     
      
   svg.append("path")
     .datum(graticule)
@@ -134,14 +131,14 @@ console.log(cc);
     .attr("d", path);
 
   var country = svg.selectAll(".country").data(countries);
-    country
-      .enter().insert("path", ".graticule")
-        .attr("class", "country")
-        .attr("title", function(d,i) { return d.name; })
-        .attr("d", path)
-        .style("fill", function(d) 
-               {return (cc[d.id]) ? cc[d.id] : '#80C780'; 
-                     })
+  country
+    .enter().insert("path", ".graticule")
+      .attr("class", "country")
+      .attr("title", function(d,i) { return d.name; })
+      .attr("d", path)
+      .style("fill", function(d) 
+                   {return (cc[d.id]); 
+                   })
 
   var tooltip = d3.select("body").append("div")
     .attr("class", "tooltip");
@@ -149,14 +146,11 @@ console.log(cc);
   country
       .on("mousemove", function(d,i) {
         var mouse = d3.mouse(svg.node()).map( function(d) { return parseInt(d); } );
-        var price =  function() 
-        {return (priceMatch[d.id]) ? priceMatch[d.id] : "Unknown"; 
-                   }();
         tooltip
           .classed("hidden", false)
           .attr("style", "left:"+(mouse[0]+10)+"px;top:"+(mouse[1]+40)+"px")
-          .html(d.properties.name + " " + "(" + d.properties.continent + ")" + '<br>' + 'Retail Price: ' + price );                                                                                                                                                                 
-      console.log (price)     
+         //.html(d.properties.name
+          .html(d.properties.name + " " + "(" + d.properties.continent + ")" )
       })
       .on("mouseout",  function(d,i) {
         tooltip.classed("hidden", true)
@@ -165,8 +159,4 @@ console.log(cc);
 
   });
   });
-  </script>
- </div>
-</body>
-</html>
-
+</script>﻿
